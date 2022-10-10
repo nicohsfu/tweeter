@@ -1,0 +1,42 @@
+nav {
+  /* Bungee font should apply to the Tweeter logo in the nav */
+  font-family: 'Bungee', cursive, sans-serif;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 1em;
+
+  display: flex;
+  align-items: flex-end;
+  box-sizing: border-box;
+  justify-content: space-between;
+
+  position: fixed;
+}
+
+nav.span {
+  font-family: 'Bungee', cursive, sans-serif;
+}
+
+.chevron-and-call-to-action {
+  font-family: 'Source Sans Pro', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.fa-angles-down {
+  color: red;
+}
+

@@ -1,0 +1,21 @@
+header {
+  height: 520px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgb(230, 213, 247);
+
+  /* position: absolute;
+  top: 120px; */
+
+  background-image: url('../images/texture.png');
+  /* background-size: cover; */
+}
+
+header img {
+  margin-top: 120px;
+}
