@@ -1,24 +1,14 @@
-article.tweets {
+.tweets {
   margin-top: 2em;
   padding: 1em;
   border: 3px solid #545149;
 }
 
 article.tweets>header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  /* align-items: flex-end; */
-
   width: 100%;
   height: auto;
   background-color: #f4f1ec;
   background-image: none;
-}
-
-article.tweets>header>img {
-  width: 3em;
-  margin-top: 0px;
 }
 
 article.tweets>header>p {
@@ -31,7 +21,25 @@ article.tweets>footer {
   justify-content: space-between;
 }
 
-i:hover{
+i:hover {
   color: orange;
   cursor: pointer;
+}
+
+.image-name-handle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.tweets-img {
+  width: 50px;
+  height: 50px;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.tweets:hover {
+  box-shadow: 2px 2px 2px 2px #545149;
 }
