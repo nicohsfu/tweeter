@@ -1,0 +1,37 @@
+article.tweets {
+  margin-top: 2em;
+  padding: 1em;
+  border: 3px solid #545149;
+}
+
+article.tweets>header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: flex-end; */
+
+  width: 100%;
+  height: auto;
+  background-color: #f4f1ec;
+  background-image: none;
+}
+
+article.tweets>header>img {
+  width: 3em;
+  margin-top: 0px;
+}
+
+article.tweets>header>p {
+  justify-content: left;
+}
+
+article.tweets>footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+i:hover{
+  color: orange;
+  cursor: pointer;
+}

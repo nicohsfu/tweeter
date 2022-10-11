@@ -12,12 +12,12 @@ header {
   /* position: absolute;
   top: 120px; */
 
-  /* background-image: url('../images/texture.png'); */
+  background-image: url('../images/texture.png');
 
-  background-image: url('../images/windows-xp.jpg');
-  background-position: center;
+  /* background-image: url('../images/windows-xp.jpg'); */
+  /* background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover;*/
 }
 
 header img {
