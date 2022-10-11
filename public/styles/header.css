@@ -7,13 +7,17 @@ header {
   justify-content: center;
   align-items: center;
 
-  background-color: rgb(230, 213, 247);
+  background-color: rgb(164, 151, 238);
 
   /* position: absolute;
   top: 120px; */
 
-  background-image: url('../images/texture.png');
-  /* background-size: cover; */
+  /* background-image: url('../images/texture.png'); */
+
+  background-image: url('../images/windows-xp.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 header img {
