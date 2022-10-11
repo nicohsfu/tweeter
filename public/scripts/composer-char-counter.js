@@ -9,6 +9,15 @@ $(document).ready(function() {
     const tweetLength = $(this).val().length;
     let maxLength = charLimit - tweetLength;
     charCount.text(maxLength);
+
+    if (maxLength >= 0) {
+      charCount.css({ 'color': '#545149' });
+    }
+
+    if (maxLength < 0) {
+      charCount.css({ 'color': 'red' });
+    }
+
   });
 
 });
@@ -16,9 +25,3 @@ $(document).ready(function() {
 // $('li');    // FINDS an element in the DOM
 // $('<li>');  // CREATES an element
 
-// recommended variable naming to signify that it's jQuery
-// const $myLi = $('<li>');
-
-// captures the string input and its length:
-// const textAreaLength = $('textarea').val.length;
-// console.log("textAreaLength: ", textAreaLength);
