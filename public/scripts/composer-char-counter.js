@@ -1,14 +1,17 @@
 $(document).ready(function() {
-  console.log('composer-char-counter.js is loaded into the HTML!');
+  console.log('composer-char-counter.js loaded into HTML!');
 
-  const textAreaContent = $('#text-area-id');
+  let tweetTextId = $('#tweet-text');
 
-  textAreaContent.on('keyup', () => {
-    console.log('key up');
+  tweetTextId.on('input', function() {
+    let charCount = $("#output-id");
+    let charLimit = 140;
+    const tweetLength = $(this).val().length;
+    let maxLength = charLimit - tweetLength;
+    charCount.text(maxLength);
   });
-});
 
-// -----
+});
 
 // $('li');    // FINDS an element in the DOM
 // $('<li>');  // CREATES an element
@@ -16,13 +19,6 @@ $(document).ready(function() {
 // recommended variable naming to signify that it's jQuery
 // const $myLi = $('<li>');
 
-// -----
-
 // captures the string input and its length:
-
-// textAreaContent.addEventListener('keydown', () => {
-//   console.log("keydown!");
-// });
-
 // const textAreaLength = $('textarea').val.length;
 // console.log("textAreaLength: ", textAreaLength);
