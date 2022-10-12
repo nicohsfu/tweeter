@@ -43,7 +43,7 @@ $(document).ready(function() {
           </div>
         </header>
         <p class="bold">
-          ${tweet.content.text}
+          ${escape(tweet.content.text)}
         </p>
         <hr />
         <footer>
@@ -66,6 +66,13 @@ $(document).ready(function() {
 
   const $tweetForm = $('#tweet-form');
 
+  const $chevron = $('#chevron');
+  const $newTweet = $('.new-tweet');
+
+  $chevron.click(() => {
+    $newTweet.slideToggle();
+  });
+
   const loadTweets = function() {
     $.ajax({
       url: '/tweets',
@@ -80,9 +87,23 @@ $(document).ready(function() {
   };
 
   loadTweets();
+  $('.error').hide();
 
   $tweetForm.submit(function(event) {
     event.preventDefault();
+
+    $errorDiv = $('#error-div');
+
+    $('.error').hide();
+
+    let tweetLength = $(this).find('textarea').val().length;
+    if (!tweetLength) {
+      return $("#error-div-empty").slideDown();
+    }
+
+    if (tweetLength > 140) {
+      return $("#error-div-limit").slideDown();
+    }
 
     $.ajax({
       url: '/tweets',
@@ -97,8 +118,17 @@ $(document).ready(function() {
         console.log("error: ", error);
       });
 
+    $(this).find('#tweet-text').val('');
+    $(this).find('.counter').val(140);
+
     console.log("#tweet-form.serialize() value: ", $("#tweet-form").serialize());
 
   });
+
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
 });

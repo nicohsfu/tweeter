@@ -11,8 +11,8 @@ $(document).ready(function() {
 
     if (maxLength < 0) {
       charCount.addClass('redColor');
-    } 
-    
+    }
+
     if (maxLength >= 0) {
       charCount.removeClass('redColor');
     }
