@@ -29,7 +29,6 @@
 
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
-  <script src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
@@ -78,8 +77,12 @@
       </form>
     </section>
 
-    <!-- all the tweets -->
-    <section>
+    <!-- dynamic tweets being displayed -->
+    <section id="tweet-container">
+    </section>
+
+    <!-- hardcoded tweet -->
+    <!-- <section>
       <article class="tweets">
         <header>
           <div class="image-name-handle">
@@ -107,12 +110,12 @@
           </span>
         </footer>
       </article>
-    </section>
+    </section> -->
 
   </main>
 
   <!-- delay execution of code until HTML is fully loaded -->
-  <!-- <script src="/scripts/composer-char-counter.js"></script> -->
+  <script src="/scripts/composer-char-counter.js"></script>
 </body>
 
 </html>
