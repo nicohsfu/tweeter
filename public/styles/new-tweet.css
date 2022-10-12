@@ -1,9 +1,10 @@
-new-tweet {
+.new-tweet {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
 
-  padding-top: 200px;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .bungee-font {

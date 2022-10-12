@@ -4,18 +4,17 @@ $(document).ready(function() {
   let tweetTextId = $('#tweet-text');
 
   tweetTextId.on('input', function() {
-    let charCount = $("#output-id");
-    let charLimit = 140;
+    const charCount = $(this).parent().parent().find('.counter');
     const tweetLength = $(this).val().length;
-    let maxLength = charLimit - tweetLength;
+    let maxLength = 140 - tweetLength;
     charCount.text(maxLength);
 
-    if (maxLength >= 0) {
-      charCount.css({ 'color': '#545149' });
-    }
-
     if (maxLength < 0) {
-      charCount.css({ 'color': 'red' });
+      charCount.addClass('redColor');
+    } 
+    
+    if (maxLength >= 0) {
+      charCount.removeClass('redColor');
     }
 
   });
