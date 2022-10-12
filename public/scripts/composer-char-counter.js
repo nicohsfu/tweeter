@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  console.log('composer-char-counter.js loaded into HTML!');
+  console.log('composer-char-counter.js loaded');
 
   let tweetTextId = $('#tweet-text');
 

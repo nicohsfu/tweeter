@@ -5,49 +5,21 @@
  */
 
 $(document).ready(function() {
-
-  console.log("client js loaded");
-
-  // Fake data taken from initial-tweets.json
-  const data = [
-    {
-      "user": {
-        "name": "Nico Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd"
-      },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
+  console.log("client.js loaded");
 
   const $tweetContainer = $('#tweet-container');
 
   const renderTweets = function(tweets) {
 
-    console.log("renderTweets function loaded");
+    // console.log("renderTweets function loaded");
 
     // loops through tweets
     for (const tweet of tweets) {
-      console.log("tweet", tweet);
+      // console.log("tweet", tweet);
 
       // calls createTweetElement for each tweet
       const $returnVal = createTweetElement(tweet);
-      console.log("$returnVal", $returnVal);
+      // console.log("$returnVal", $returnVal);
 
       // takes return value and appends it to the tweets container
       $tweetContainer.append($returnVal);
@@ -76,7 +48,7 @@ $(document).ready(function() {
         <hr />
         <footer>
           <h3 class="no-margin">
-          ${tweet.created_at}
+          ${timeago.format(tweet.created_at)}
           </h3>
           <span>
             <i class="fa-solid fa-flag"></i>
@@ -90,6 +62,43 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  renderTweets(data);
+  // ----  form stuff below
+
+  const $tweetForm = $('#tweet-form');
+
+  const loadTweets = function() {
+    $.ajax({
+      url: '/tweets',
+      method: 'GET',
+    })
+      .then((arr) => {
+        renderTweets(arr.reverse());
+      })
+      .catch((error) => {
+        console.log("error: ", error);
+      });
+  };
+
+  loadTweets();
+
+  $tweetForm.submit(function(event) {
+    event.preventDefault();
+
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data: $("#tweet-form").serialize()
+    })
+      .then(() => {
+        $('#tweet-container').empty();
+        loadTweets();
+      })
+      .catch((error) => {
+        console.log("error: ", error);
+      });
+
+    console.log("#tweet-form.serialize() value: ", $("#tweet-form").serialize());
+
+  });
 
 });
