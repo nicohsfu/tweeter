@@ -29,10 +29,6 @@ Mobile View - "Write a new tweet" feature shown after button click. Thw "Scroll 
 
 !["screenshot description"](https://github.com/nicohsfu/tweeter/blob/master/docs/mobile2.png?raw=true)
 
-Mobile View - "Write a new tweet" feature shown after button click. The "Scroll to top" button is also shown on the bottom-right of the page.
-
-!["screenshot description"](https://github.com/nicohsfu/tweeter/blob/master/docs/mobile2.png?raw=true)
-
 Error Handling - When the user tries to tweet with no content, they are prevented from doing so and an error message is shown. 
 
 !["screenshot description"](https://github.com/nicohsfu/tweeter/blob/master/docs/error1.png?raw=true)
