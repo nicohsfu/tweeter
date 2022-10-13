@@ -117,7 +117,7 @@ $(document).ready(function() {
     $(this).find('#tweet-text').val('');
     $(this).find('.counter').val(140);
 
-    console.log("#tweet-form.serialize() value: ", $("#tweet-form").serialize());
+    // console.log("#tweet-form.serialize() value: ", $("#tweet-form").serialize());
 
   });
 
