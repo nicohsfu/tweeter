@@ -11,15 +11,11 @@ $(document).ready(function() {
 
   const renderTweets = function(tweets) {
 
-    // console.log("renderTweets function loaded");
-
     // loops through tweets
     for (const tweet of tweets) {
-      // console.log("tweet", tweet);
 
       // calls createTweetElement for each tweet
       const $returnVal = createTweetElement(tweet);
-      // console.log("$returnVal", $returnVal);
 
       // takes return value and appends it to the tweets container
       $tweetContainer.append($returnVal);

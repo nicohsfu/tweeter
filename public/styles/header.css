@@ -9,15 +9,7 @@ header {
 
   background-color: rgb(162, 214, 238);
 
-  /* position: absolute;
-  top: 120px; */
-
   background-image: url('../images/texture.png');
-
-  /* background-image: url('../images/windows-xp.jpg'); */
-  /* background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;*/
 }
 
 header img {

@@ -6,6 +6,7 @@ $(document).ready(function() {
   tweetTextId.on('input', function() {
     const charCount = $(this).parent().parent().find('.counter');
     const tweetLength = $(this).val().length;
+    
     let maxLength = 140 - tweetLength;
     charCount.text(maxLength);
 
