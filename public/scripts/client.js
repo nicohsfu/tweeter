@@ -62,7 +62,7 @@ $(document).ready(function() {
     return $tweet;
   };
 
-  // ----  form stuff below
+  // form below
 
   const $tweetForm = $('#tweet-form');
 
@@ -125,6 +125,7 @@ $(document).ready(function() {
 
   });
 
+  // ensures that user-inputted texts are just text, and not executable code
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));

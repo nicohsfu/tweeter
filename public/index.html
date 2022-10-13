@@ -23,6 +23,8 @@
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
   <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/breakpoints.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/scroll-to-top.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -59,80 +61,54 @@
       </div>
     </header>
 
-    <section class="new-tweet">
-      <div id="error-div-empty" class="error">
-        Error: Tweet cannot be empty!
-      </div>
-      <div id="error-div-limit" class="error">
-        Error: Tweet exceeds character limit!
-      </div>
-      <form action="/tweets/" method="POST" id="tweet-form">
-        <div>
-          <label for="tweet-text" class="source-sans-pro-font bold">
-            What are you humming about?
-          </label>
+    <div class="desktop-breakpoint">
+      <section class="new-tweet">
+        <div id="error-div-empty" class="error">
+          Error: Tweet cannot be empty!
         </div>
-        <div class="border-and-margin-bottom">
-          <textarea class="bold" name="text" id="tweet-text" rows="1"></textarea>
+        <div id="error-div-limit" class="error">
+          Error: Tweet exceeds character limit!
         </div>
-        <div class="tweet-button-and-character-count">
-          <button type="submit" class="bold" id="submit-button">
-            Tweet
-          </button>
-          <output name="counter" class="counter bold bungee-font" for="tweet-text" id="output-id">
-            140
-          </output>
-        </div>
-      </form>
-    </section>
-
-    <!-- dynamic tweets -->
-    <section id="tweet-container">
-    </section>
-
-    <div class="scroll-up-container">
-      <a href="#top-header" id="smooth-scroll">
-        <button id="scroll-bottom">
-          <i class="fa-solid fa-angles-up" id="back-to-top"></i>
-        </button>
-      </a>
-    </div>
-
-    <!-- hardcoded tweet -->
-    <!-- <section>
-      <article class="tweets">
-        <header>
-          <div class="image-name-handle">
-            <span class="bold">
-              <img src=/images/profile-hex.png class="tweets-img"></img>
-              Newton
-            </span>
-            <span class="bold">
-              @SirIsaac
-            </span>
+        <form action="/tweets/" method="POST" id="tweet-form">
+          <div>
+            <label for="tweet-text" class="source-sans-pro-font bold">
+              What are you humming about?
+            </label>
           </div>
-        </header>
-        <p class="bold">
-          If I have seen further it is by standing on the shoulders of giants
-        </p>
-        <hr />
-        <footer>
-          <h3 class="no-margin">
-            10 days ago
-          </h3>
-          <span>
-            <i class="fa-solid fa-flag"></i>
-            <i class="fa-solid fa-retweet"></i>
-            <i class="fa-solid fa-heart"></i>
-          </span>
-        </footer>
-      </article>
-    </section> -->
+          <div class="border-and-margin-bottom">
+            <textarea class="bold" name="text" id="tweet-text" rows="1"></textarea>
+          </div>
+          <div class="tweet-button-and-character-count">
+            <button type="submit" class="bold" id="submit-button">
+              Tweet
+            </button>
+            <output name="counter" class="counter bold bungee-font" for="tweet-text" id="output-id">
+              140
+            </output>
+          </div>
+        </form>
+      </section>
+
+      <!-- dynamic tweets -->
+      <section id="tweet-container">
+      </section>
+
+      <!-- scroll to top button -->
+      <div class="scroll-up-container">
+        <a href="#top-header" id="smooth-scroll">
+          <button id="scroll-up">
+            <i class="fa-solid fa-angles-up" id="back-to-top"></i>
+          </button>
+        </a>
+      </div>
+
+    </div>
 
   </main>
 
   <!-- delay execution of JS code until HTML is fully loaded -->
   <script src="/scripts/composer-char-counter.js"></script>
+
 </body>
 
 </html>

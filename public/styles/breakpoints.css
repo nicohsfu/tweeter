@@ -1,0 +1,26 @@
+@media only screen and (min-width: 1024px) {
+
+  main {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main #top-header {
+    margin-top: 150px;
+    margin-right: 5%;
+    max-width: 40%;
+  }
+
+  .desktop-breakpoint {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    min-width: 60%;
+  }
+
+  main .new-tweet {
+    display: none;
+    margin-top: 0;
+  }
+
+}

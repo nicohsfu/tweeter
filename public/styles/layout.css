@@ -24,20 +24,6 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
-
-main {
-  display: flex;
-  flex-direction: column;
-
-  padding-right: 5%;
-  padding-left: 5%;
-
-  background-color: #f4f1ec;
-}
-
 .bold {
   font-weight: bold;
 }
@@ -50,30 +36,20 @@ main {
   color: rgb(133, 10, 10);
 }
 
-.error {
-  background-color: rgb(133, 10, 10);
-  border: 3px solid rgb(133, 10, 10);
-  border-radius: 0.5rem;
-  color: white;
-  padding: 0.5rem;
-  margin-bottom: 1rem;
-}
-
 button:hover {
   cursor: pointer;
 }
 
-#scroll-bottom {
-  position: fixed;
-  right: 1%;
-  bottom: 1%;
-  background: rgb(172, 94, 94);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  outline: rgb(172, 94, 94);
-}
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
 
-.fa-angles-up {
-  color: rgb(255, 255, 255);
+main {
+  display: flex;
+  flex-direction: column;
+
+  padding-right: 5%;
+  padding-left: 5%;
+
+  background-color: #f4f1ec;
 }

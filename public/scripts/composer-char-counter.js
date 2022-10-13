@@ -20,7 +20,3 @@ $(document).ready(function() {
   });
 
 });
-
-// $('li');    // FINDS an element in the DOM
-// $('<li>');  // CREATES an element
-
