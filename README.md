@@ -2,23 +2,32 @@
 
 Tweeter is a simple, single-page Twitter clone.
 
-This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
-
 ## Final Product
 
-Title
+Desktop View - "Write a new tweet" feature initially hidden
 
-!["screenshot description"](linkHere)
+!["screenshot description"](https://github.com/nicohsfu/tweeter/blob/master/docs/desktop1.png?raw=true)
+
+Desktop View - "Write a new tweet" feature shown after button click
+
+!["screenshot description"](https://github.com/nicohsfu/tweeter/blob/master/docs/desktop2.png?raw=true)
 
 
-Title
+Tablet View - "Write a new tweet" feature initially hidden
 
-!["screenshot description"](linkHere)
+!["screenshot description"](https://github.com/nicohsfu/tweeter/blob/master/docs/tablet1.png?raw=true)
 
+Tablet View - "Write a new tweet" feature shown after button click
 
-Title
+!["screenshot description"](https://github.com/nicohsfu/tweeter/blob/master/docs/tablet2.png?raw=true)
 
-!["screenshot description"](linkHere)
+Mobile View - "Write a new tweet" feature initially hidden
+
+!["screenshot description"](https://github.com/nicohsfu/tweeter/blob/master/docs/mobile1.png?raw=true)
+
+Mobile View - "Write a new tweet" feature shown after button click. Thw "Scroll to top" button is also shown on the bottom-right of the page.
+
+!["screenshot description"](https://github.com/nicohsfu/tweeter/blob/master/docs/mobile2.png?raw=true)
 
 ## Getting Started
 
