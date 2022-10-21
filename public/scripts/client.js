@@ -10,6 +10,7 @@ $(document).ready(function() {
   const $tweetContainer = $('#tweet-container');
 
   const renderTweets = function(tweets) {
+    $tweetContainer.empty();
 
     // loops through tweets
     for (const tweet of tweets) {
@@ -107,7 +108,6 @@ $(document).ready(function() {
       data: $("#tweet-form").serialize()
     })
       .then(() => {
-        $('#tweet-container').empty();
         loadTweets();
       })
       .catch((error) => {
